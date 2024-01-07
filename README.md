@@ -2,7 +2,8 @@
 Collection of powershell scripts to get dev tooling ready
 
 - run powershell as admin before running any scripts and execute the following:
-	Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+  
+	**Set-ExecutionPolicy -ExecutionPolicy RemoteSigned**
 
 - Only the scripts prefixed with "run" can be executed for installing programs, right-click the script and choose "Run with PowerShell"
 
