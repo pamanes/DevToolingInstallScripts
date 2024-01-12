@@ -8,5 +8,5 @@ Set-Location $path
 . ".\install_functions.ps1"
 
 
-WingetInstall "Microsoft.SQLServerManagementStudio"
+WingetInstall "Microsoft.SQLServerManagementStudio" --override "/quiet"
 Read-Host -Prompt "Done." | Out-Null

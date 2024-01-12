@@ -53,7 +53,6 @@ if (-not $PostRestart)
 {
     Write-Host "Launching WSL install..."
     $wslInstall = Start-Process -FilePath wsl.exe -ArgumentList "--install -d Ubuntu --no-launch" -Wait -PassThru
-    $wslInstall
     Set-StartupTask $PSCommandPath
     Read-Host -Prompt "Wait WSL to finish setup, then press ENTER to RESTART..." | Out-Null
     Write-Host "Restarting"
@@ -62,7 +61,7 @@ if (-not $PostRestart)
 else 
 {
     Write-Host "Starting wsl..."
-    Write-Host "Wait for WSL and finish setup (enter username and password), then close WSL window to resume this script."
+    Write-Host "Wait for WSL to finish setup, then create username and password to login, then close WSL window to finish this script."
     Start-Process -FilePath ubuntu.exe -Wait -PassThru
 	Read-Host -Prompt "Done." | Out-Null
 }
