@@ -12,7 +12,7 @@ Set-Location $path
 . ".\install_functions.ps1"
 
 
-Write-Host "Installing VS..."
+Write-Host "Installing SQL Server 2019..."
 (echo "
 [OPTIONS] 
 INSTANCENAME=`"SQL2019`"
