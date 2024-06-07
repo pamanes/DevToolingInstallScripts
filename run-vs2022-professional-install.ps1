@@ -87,5 +87,5 @@ Write-Host "Installing VS..."
 	`"Microsoft.VisualStudio.Workload.Data`" 
 	] 
 }") > $VSConfigFile
-WingetInstall "Microsoft.VisualStudio.2022.Community" --source winget --exact --override "--passive --config $($VSConfigFile)"
+WingetInstall "Microsoft.VisualStudio.2022.Professional" --source winget --exact --override "--passive --config $($VSConfigFile)"
 Read-Host -Prompt "Done." | Out-Null
