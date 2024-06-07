@@ -21,7 +21,7 @@ ACTION=`"Install`"
 FEATURES=`"SQLEngine`"
 SQLSYSADMINACCOUNTS=`"$($userAccount)`"
 SECURITYMODE=`"SQL`"
-SAPWD=`"sapwd`"
+SAPWD=`"#QjnRBLJjGMncR6Dv#`"
 SQLCOLLATION=`"SQL_Latin1_General_CP1_CI_AS`"
 ") > $VSConfigFile
 WingetInstall "Microsoft.SQLServer.2019.Developer" --override "/q /IACCEPTSQLSERVERLICENSETERMS /ENU /ConfigurationFile=$($VSConfigFile)"
