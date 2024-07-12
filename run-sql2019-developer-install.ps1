@@ -12,9 +12,8 @@ Set-Location $path
 . ".\install_functions.ps1"
 
 do {
-    Write-Host "I am here to compare the password you are entering..."
-    $pwd1 = Read-Host "Password" -AsSecureString
-    $pwd2 = Read-Host "Re-enter Password" -AsSecureString
+    $pwd1 = Read-Host "Enter sa password" -AsSecureString
+    $pwd2 = Read-Host "Re-enter sa password" -AsSecureString
     $pwd1_text = [Runtime.InteropServices.Marshal]::PtrToStringAuto([Runtime.InteropServices.Marshal]::SecureStringToBSTR($pwd1))
     $pwd2_text = [Runtime.InteropServices.Marshal]::PtrToStringAuto([Runtime.InteropServices.Marshal]::SecureStringToBSTR($pwd2))
 }
