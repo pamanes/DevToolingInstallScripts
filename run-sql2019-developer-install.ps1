@@ -1,4 +1,4 @@
-﻿$VSConfigFile = "$env:USERPROFILE\sql2019.config"
+$VSConfigFile = "$env:USERPROFILE\sql2019.config"
 
 $userAccount = [System.Security.Principal.WindowsIdentity]::GetCurrent().Name
 
@@ -11,8 +11,15 @@ Set-Location $path
 
 . ".\install_functions.ps1"
 
-$pwd = Read-Host "Enter password for sa account"
-Write-Host "Installing SQL Server 2019..."
+do {
+    Write-Host "I am here to compare the password you are entering..."
+    $pwd1 = Read-Host "Password" -AsSecureString
+    $pwd2 = Read-Host "Re-enter Password" -AsSecureString
+    $pwd1_text = [Runtime.InteropServices.Marshal]::PtrToStringAuto([Runtime.InteropServices.Marshal]::SecureStringToBSTR($pwd1))
+    $pwd2_text = [Runtime.InteropServices.Marshal]::PtrToStringAuto([Runtime.InteropServices.Marshal]::SecureStringToBSTR($pwd2))
+}
+while ($pwd1_text -ne $pwd2_text)
+
 (echo "
 [OPTIONS] 
 INSTANCENAME=`"SQL2019`"
@@ -21,7 +28,7 @@ ACTION=`"Install`"
 FEATURES=`"SQLEngine`"
 SQLSYSADMINACCOUNTS=`"$($userAccount)`"
 SECURITYMODE=`"SQL`"
-SAPWD=`"$($pwd1)`"
+SAPWD=`"$($pwd1_text)`"
 SQLCOLLATION=`"SQL_Latin1_General_CP1_CI_AS`"
 ") > $VSConfigFile
 WingetInstall "Microsoft.SQLServer.2019.Developer" --override "/q /IACCEPTSQLSERVERLICENSETERMS /ENU /ConfigurationFile=$($VSConfigFile)"
