@@ -8,5 +8,5 @@ Set-Location $path
 . ".\install_functions.ps1"
 
 
-WingetInstall "PostgreSQL.PostgreSQL.16" --override "--silent"
+WingetInstall "PostgreSQL.PostgreSQL.16" --silent
 Read-Host -Prompt "Done." | Out-Null
