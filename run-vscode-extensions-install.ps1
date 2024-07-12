@@ -15,6 +15,7 @@ if((Check-WingetInstall "Microsoft.VisualStudioCode") -eq $false)
 }
 else
 {
+	code --install-extension amazonwebservices.amazon-q-vscode
 	code --install-extension Angular.ng-template --force 
 	code --install-extension dbaeumer.vscode-eslint --force 
 	code --install-extension eamodio.gitlens --force 
