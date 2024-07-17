@@ -15,3 +15,5 @@ Collection of powershell scripts to get dev tooling ready
 - If you're installing docker, make sure you run "run-wsl-install" first, docker requires WSL, then run "run-docker-install". After installing Docker, open Powershell as Administrator and execute the following: **bcdedit /set hypervisorlaunchtype auto** and restart your computer.
 
 - If run-vscode-extensions-install.ps1 throws certificate errors, disable your VPN or internet security before running and try again
+
+- Windows Terminal and Winget are already on the latest version of Windows 11. If you are using Windows 10 you may need to install them using the scripts.
