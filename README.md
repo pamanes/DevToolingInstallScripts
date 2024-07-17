@@ -6,7 +6,7 @@ Collection of powershell scripts to get dev tooling ready
 	**Set-ExecutionPolicy -ExecutionPolicy RemoteSigned**
 - Make sure winget is installed by running command **winget** in terminal or powershell, if not installed you can install from here: https://github.com/microsoft/winget-cli
 
-- Right-click on each .ps1 file and click Properties, make sure to Unblock them before executing them
+- Right-click on each .ps1 file and click Properties, if they show as blocked make sure to Unblock them before executing them, this depends on your group policy for downloading files from the internet.
   
 - Only the scripts prefixed with "run" can be executed for installing programs, right-click the script and choose "Run with PowerShell"
 
