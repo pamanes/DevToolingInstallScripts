@@ -13,7 +13,7 @@ function WingetInstall($id){
         Write-Host "$($id) already installed"
     }
 }
-
+#By default winget will install package if not installed, or upgrade if already installed but a newer package exists, this prevents the latter.
 function Check-WingetInstall($id)
 {
     if (-not (Get-WingetStatus)) 
