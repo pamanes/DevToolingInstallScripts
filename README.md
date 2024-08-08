@@ -1,7 +1,7 @@
 # DevToolingInstallScripts
 Collection of powershell scripts to get dev tooling ready
 
-- Windows Terminal and Winget are required to run these scripts, they already installed on the latest version of Windows 11. If you are using Windows 10 you may need to install them manually, look here: https://github.com/microsoft/winget-cli
+- Windows Terminal and Winget are required to run these scripts, they are already installed on Windows 11. If you are using Windows 10 you may need to install them manually, look here: https://github.com/microsoft/winget-cli
 
 - run powershell as admin before running any scripts and execute the following (Administrator rights required for some scripts):
   
