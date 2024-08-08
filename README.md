@@ -3,7 +3,7 @@ Collection of powershell scripts to get dev tooling ready
 
 - Winget is required to run these scripts, it is already installed on Windows 11. If you are using Windows 10 you may need to install it manually, look here: https://github.com/microsoft/winget-cli
 
-- run powershell as admin before running any scripts and execute the following (Administrator rights required for some scripts):
+- Run powershell as admin before running any scripts and execute the following (Administrator rights required for some scripts):
   
 	**Set-ExecutionPolicy -ExecutionPolicy RemoteSigned**
 
