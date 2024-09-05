@@ -1,5 +1,5 @@
-﻿$homePath = "$env:UserProfile"
-$oneDrivePath = "$env:OneDriveCommercial"
+$homePath = "$env:UserProfile"
+$oneDrivePath = "$env:OneDrive"
 $documentsPath = Join-Path $oneDrivePath "Documents"
 $toolingPath = Join-Path $documentsPath "Tooling"
 
@@ -30,10 +30,6 @@ if((Test-Path $homePath) -and (Test-Path $oneDrivePath) -and (Test-Path $documen
 			$fileName = [System.IO.Path]::GetFileNameWithoutExtension($downloadUri)
 			$zipName = [System.IO.Path]::GetFileName($downloadUri);
 			Invoke-WebRequest -Uri $downloadUri -OutFile $zipName			
-			if((Test-Path $zipName) -eq $true)
-			{
-				Remove-Item -Recurse $zipName
-			}
 			if((Test-Path $fileName) -eq $false)
 			{
 				Write-Host "Expanding..."
