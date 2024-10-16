@@ -31,4 +31,4 @@ SAPWD=`"$($pwd1_text)`"
 SQLCOLLATION=`"SQL_Latin1_General_CP1_CI_AS`"
 ") > $VSConfigFile
 WingetInstall "Microsoft.SQLServer.2019.Developer" --override "/q /IACCEPTSQLSERVERLICENSETERMS /ENU /ConfigurationFile=$($VSConfigFile)"
-Read-Host -Prompt "Done." | Out-Null
+Read-Host -Prompt "Done. Please restart if installer failed with with exist code: 3010" | Out-Null
