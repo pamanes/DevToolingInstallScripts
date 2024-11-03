@@ -8,7 +8,7 @@ Collection of powershell scripts to get dev tooling ready
 - Restart your computer
 - Open WSL and Ubuntu, wait for install to finish and enter Ubuntu username, and password
 - Open Docker Desktop -> Settings and make sure Docker Desktop is using WSL
-- To install SQL Server, JMeter, and VSCode Extensions:
+- To install the rest of the programs, like SQL Server, JMeter, VSCode Extensions, AWS CLI V2, etc:
 
 	- Run in terminal **Set-ExecutionPolicy -ExecutionPolicy RemoteSigned**
 	- Make sure all ps1 files are unblocked: Get-ChildItem "C:\Path\To\DevToolingInstallScripts" -Recurse | Unblock-File 
