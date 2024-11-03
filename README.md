@@ -22,7 +22,7 @@ Collection of powershell scripts to get dev tooling ready
   
 	**Set-ExecutionPolicy -ExecutionPolicy RemoteSigned**
 
-- Right-click on each .ps1 file and click Properties, if they show as blocked make sure to Unblock them before executing them, this depends on your group policy for downloading files from the internet.
+- Right-click on each .ps1 file and click Properties, if they show as blocked make sure to Unblock them before executing them with **Get-ChildItem "C:\Path\To\DevToolingInstallScripts" -Recurse | Unblock-File**, this depends on your group policy for downloading files from the internet.
   
 - Only the scripts prefixed with "run" can be executed for installing programs, right-click the script and choose "Run with PowerShell"
 
@@ -32,4 +32,4 @@ Collection of powershell scripts to get dev tooling ready
 
 # Final Steps
 
-- After installing WSL/Docker, open Powershell as Administrator and execute the following: **bcdedit /set hypervisorlaunchtype auto** and restart your computer.
+- If you installed WSL/Docker, open Powershell as Administrator and execute the following: **bcdedit /set hypervisorlaunchtype auto** and restart your computer.
