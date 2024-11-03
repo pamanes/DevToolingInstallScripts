@@ -94,14 +94,6 @@ properties:
             id: Git.Git
             source: winget
         - resource: Microsoft.WinGet.DSC/WinGetPackage
-          id: JMeter
-          directives:
-            description: Install JMeter
-            allowPrerelease: false
-          settings:
-            id: DEVCOM.JMeter
-            source: winget
-        - resource: Microsoft.WinGet.DSC/WinGetPackage
           id: SSMS
           directives:
             description: Install SSMS
