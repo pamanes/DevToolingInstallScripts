@@ -19,6 +19,14 @@ properties:
             id: Microsoft.PowerShell
             source: winget        
         - resource: Microsoft.WinGet.DSC/WinGetPackage
+          id: Notepad++
+          directives:
+            description: Install Notepad++
+            allowPrerelease: false
+          settings:
+            id: Notepad++.Notepad++
+            source: winget        			
+        - resource: Microsoft.WinGet.DSC/WinGetPackage
           id: WSL
           directives:
             description: Install Windows Subsystem for Linux
