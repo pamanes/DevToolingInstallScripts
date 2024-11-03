@@ -1,6 +1,19 @@
 # DevToolingInstallScripts
 Collection of powershell scripts to get dev tooling ready
 
+# Install Option #1 (winget configure)
+
+- Open Terminal as Administrator, navigate to winget_configure/.configurations folder and run **winget configure .\configuration.dsc.yaml --verbose-logs**
+- Restart your computer
+- Open WSL and Ubuntu, wait for install to finish and enter Ubuntu username, and password
+- Open Docker Desktop -> Settings and make sure Docker Desktop is using WSL
+- To install SQL Server, JMEter, and VSCode Extentions:
+	Run in terminal **Set-ExecutionPolicy -ExecutionPolicy RemoteSigned**
+        Make sure all ps1 files are unblocked: Get-ChildItem "C:\Path\To\DevToolingInstallScripts" -Recurse | Unblock-File 
+        Right-click on the install file, for example **run-install-sql2019.ps1** and click Run with Powershell
+  
+# Install Option #2 (execute run-install*.ps1 files manually)
+
 - Powershell and Winget are required to run these scripts, they are already installed on Windows 11. If you are using Windows 10 you may need to install them manually, for winget look here: https://github.com/microsoft/winget-cli
 
 - Run powershell as admin before running any scripts and execute the following (Administrator rights required for some scripts):
@@ -14,3 +27,7 @@ Collection of powershell scripts to get dev tooling ready
 - If you're installing docker, make sure you run "run-wsl-install" first, docker requires WSL, then run "run-docker-install". After installing Docker, open Powershell as Administrator and execute the following: **bcdedit /set hypervisorlaunchtype auto** and restart your computer.
 
 - If run-vscode-extensions-install.ps1 throws certificate errors, disable your VPN or internet security before running and try again
+
+# Final Steps
+
+- After installing WSL/Docker, open Powershell as Administrator and execute the following: **bcdedit /set hypervisorlaunchtype auto** and restart your computer.
