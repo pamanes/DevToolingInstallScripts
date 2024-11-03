@@ -4,7 +4,7 @@ Collection of powershell scripts to get dev tooling ready
 # Install Option #1 (winget configure)
 
 - Open Terminal as Administrator, navigate to winget_configure/.configurations folder and run **winget configure .\configuration.dsc.yaml --verbose-logs**
-- This will install: Notepad++, Powershell, Git, SSMS, Azure CLI, PostgreSQL 16, Postman, WSL, Ubuntu, Docker Desktop, VS2022 Professional (with workloads/components), and VSCode (without extentions)
+- This will install: Notepad++, NPM (16.10.0), Powershell, Git, SSMS, Azure CLI, PostgreSQL 16, Postman, WSL, Ubuntu, Docker Desktop, VS2022 Professional (with workloads/components), and VSCode (without extentions)
 - Restart your computer
 - Open WSL and Ubuntu, wait for install to finish and enter Ubuntu username, and password
 - Open Docker Desktop -> Settings and make sure Docker Desktop is using WSL
