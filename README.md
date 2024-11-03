@@ -32,4 +32,4 @@ Collection of powershell scripts to get dev tooling ready
 
 # Final Steps
 
-- If you installed WSL/Docker, open Powershell as Administrator and execute the following: **bcdedit /set hypervisorlaunchtype auto** and restart your computer.
+- If you installed WSL/Docker, open Terminal/Powershell as Administrator and execute the following: **bcdedit /set hypervisorlaunchtype auto** and restart your computer.
