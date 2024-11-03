@@ -26,8 +26,6 @@ Collection of powershell scripts to get dev tooling ready
   
 - Only the scripts prefixed with "run" can be executed for installing programs, right-click the script and choose "Run with PowerShell"
 
-- If you're installing docker, make sure you run "run-wsl-install" first, docker requires WSL, then run "run-docker-install". After installing Docker, open Powershell as Administrator and execute the following: **bcdedit /set hypervisorlaunchtype auto** and restart your computer.
-
 - If run-vscode-extensions-install.ps1 throws certificate errors, disable your VPN or internet security before running and try again
 
 # Final Steps
