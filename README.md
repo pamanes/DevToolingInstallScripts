@@ -10,7 +10,7 @@ Collection of powershell scripts to get dev tooling ready
 - Open Docker Desktop -> Settings and make sure Docker Desktop is using WSL
 - To install the rest of the programs, like SQL Server, JMeter, VSCode Extensions, AWS CLI V2, etc:
 
-	- Run in terminal **Set-ExecutionPolicy -ExecutionPolicy RemoteSigned**
+	- Run in terminal as admin: **Set-ExecutionPolicy -ExecutionPolicy RemoteSigned**
 	- Make sure all ps1 files are unblocked: Get-ChildItem "C:\Path\To\DevToolingInstallScripts" -Recurse | Unblock-File 
 	- Right-click the install file, for example **run-install-sql2019.ps1** and click Run with Powershell
 	- If run-vscode-extensions-install.ps1 throws certificate errors, disable your VPN or internet security before running and try again
