@@ -17,7 +17,7 @@ Collection of powershell scripts to get dev tooling ready
 
 - If run-vscode-extensions-install.ps1 throws certificate errors, disable your VPN or internet security before running and try again
 
-# Install Option #1 (winget configure)
+# Install Option #2 (winget configure)
 
 - Open Terminal as Administrator, navigate to winget_configure/.configurations folder and run **winget configure .\configuration.dsc.yaml --verbose-logs**
 - This will install: Notepad++, NPM (16.10.0), Powershell, Git, SSMS, Azure CLI, PostgreSQL 16, Postman, WSL, Ubuntu, Docker Desktop, VS2022 Professional (with workloads/components), and VSCode (without extentions)
