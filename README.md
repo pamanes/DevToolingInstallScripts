@@ -1,21 +1,7 @@
 # DevToolingInstallScripts
 Collection of powershell scripts to get dev tooling ready
 
-# Install Option #1 (winget configure)
-
-- Open Terminal as Administrator, navigate to winget_configure/.configurations folder and run **winget configure .\configuration.dsc.yaml --verbose-logs**
-- This will install: Notepad++, NPM (16.10.0), Powershell, Git, SSMS, Azure CLI, PostgreSQL 16, Postman, WSL, Ubuntu, Docker Desktop, VS2022 Professional (with workloads/components), and VSCode (without extentions)
-- Restart your computer
-- Open Ubuntu, you should get "Installing, this may take a few minutes...", wait for install to finish and enter Ubuntu username, and password when prompted.
-- Open Docker Desktop -> Settings and make sure Docker Desktop is using WSL (see final steps below for screenshot)
-- To install the rest of the programs, like SQL Server, JMeter, VSCode Extensions, AWS CLI V2, etc:
-
-	- Run in terminal as admin: **Set-ExecutionPolicy -ExecutionPolicy RemoteSigned**
-	- Make sure all ps1 files are unblocked: Get-ChildItem "C:\Path\To\DevToolingInstallScripts" -Recurse | Unblock-File 
-	- Right-click on each install file named run-install-*.ps1, for example **run-install-sql2019.ps1** and click Run with Powershell
-	- If run-vscode-extensions-install.ps1 throws certificate errors, disable your VPN or internet security before running and try again
-  
-# Install Option #2 (execute run-install*.ps1 files manually)
+# Install Option #1 (execute run-install*.ps1 files manually)
 
 - Powershell and Winget are required to run these scripts, they are already installed on Windows 11. If you are using Windows 10 you may need to install them manually, for winget look here: https://github.com/microsoft/winget-cli
 
@@ -30,6 +16,20 @@ Collection of powershell scripts to get dev tooling ready
 - If installing Docker, make sure to install wsl first, then docker.
 
 - If run-vscode-extensions-install.ps1 throws certificate errors, disable your VPN or internet security before running and try again
+
+# Install Option #1 (winget configure)
+
+- Open Terminal as Administrator, navigate to winget_configure/.configurations folder and run **winget configure .\configuration.dsc.yaml --verbose-logs**
+- This will install: Notepad++, NPM (16.10.0), Powershell, Git, SSMS, Azure CLI, PostgreSQL 16, Postman, WSL, Ubuntu, Docker Desktop, VS2022 Professional (with workloads/components), and VSCode (without extentions)
+- Restart your computer
+- Open Ubuntu, you should get "Installing, this may take a few minutes...", wait for install to finish and enter Ubuntu username, and password when prompted.
+- Open Docker Desktop -> Settings and make sure Docker Desktop is using WSL (see final steps below for screenshot)
+- To install the rest of the programs, like SQL Server, JMeter, VSCode Extensions, AWS CLI V2, etc:
+
+	- Run in terminal as admin: **Set-ExecutionPolicy -ExecutionPolicy RemoteSigned**
+	- Make sure all ps1 files are unblocked: Get-ChildItem "C:\Path\To\DevToolingInstallScripts" -Recurse | Unblock-File 
+	- Right-click on each install file named run-install-*.ps1, for example **run-install-sql2019.ps1** and click Run with Powershell
+	- If run-vscode-extensions-install.ps1 throws certificate errors, disable your VPN or internet security before running and try again
 
 # Final Steps
 
