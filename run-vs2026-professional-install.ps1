@@ -88,7 +88,8 @@ Write-Host "Installing VS..."
   ],
   `"extensions`": []
 }") > $VSConfigFile
-WingetInstall "Microsoft.VisualStudio.Professional" --source winget --exact --override "--passive --config $($VSConfigFile)"
+WingetInstall "Microsoft.VisualStudio.Professional" --version 18.3.2 --source winget --exact --override "--passive --config $($VSConfigFile)"
 Read-Host -Prompt "Done." | Out-Null
+
 
 
