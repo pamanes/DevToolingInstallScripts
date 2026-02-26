@@ -35,3 +35,11 @@ Collection of powershell scripts to get dev tooling ready
 
 - If you installed WSL/Docker, open Terminal/Powershell as Administrator and execute the following: **bcdedit /set hypervisorlaunchtype auto** and restart your computer.
 - Make sure Docker is using WSL by going to Docker Desktop -> Settings: ![Alt text](/docker_desktop_wsl.png?raw=true "Docker using WSL")
+
+# Troubleshooting
+If you run into issues with winget, like:
+Failed when searching source: msstore
+An unexpected error occurred while executing the command:
+0x8a150044 : The rest source endpoint is not found.
+
+Re-install winget from the msstore: https://apps.microsoft.com/detail/9nblggh4nns1?hl=en-US&gl=US
