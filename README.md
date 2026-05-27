@@ -31,6 +31,9 @@ Collection of powershell scripts to get dev tooling ready
 	- Right-click on each install file named run-install-*.ps1, for example **run-install-sql2019.ps1** and click Run with Powershell
 	- If run-vscode-extensions-install.ps1 throws certificate errors, disable your VPN or internet security before running and try again
 
+# NPM Vs. NVM
+execute either run-npm or run-npm-20 file depending on angualar version. If you need to switch across different versions, then execute run-nvm-install file instead, and follow comments in file for setup after installing.
+
 # Final Steps
 
 - If you installed WSL/Docker, open Terminal/Powershell as Administrator and execute the following: **bcdedit /set hypervisorlaunchtype auto** and restart your computer.
