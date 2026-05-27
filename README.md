@@ -17,6 +17,9 @@ Collection of powershell scripts to get dev tooling ready
 
 - If run-vscode-extensions-install.ps1 throws certificate errors, disable your VPN or internet security before running and try again
 
+# NPM Vs. NVM
+execute either run-npm or run-npm-20 file depending on angualar version. If you need to switch across different versions, then execute run-nvm-install file instead, and follow comments in file for setup after installing.
+
 # Install Option #2 (winget configure)
 
 - Open Terminal as Administrator, navigate to winget_configure/.configurations folder and run **winget configure .\configuration.dsc.yaml --verbose-logs**
@@ -30,9 +33,6 @@ Collection of powershell scripts to get dev tooling ready
 	- Make sure all ps1 files are unblocked: Get-ChildItem "C:\Path\To\DevToolingInstallScripts" -Recurse | Unblock-File 
 	- Right-click on each install file named run-install-*.ps1, for example **run-install-sql2019.ps1** and click Run with Powershell
 	- If run-vscode-extensions-install.ps1 throws certificate errors, disable your VPN or internet security before running and try again
-
-# NPM Vs. NVM
-execute either run-npm or run-npm-20 file depending on angualar version. If you need to switch across different versions, then execute run-nvm-install file instead, and follow comments in file for setup after installing.
 
 # Final Steps
 
